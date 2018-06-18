@@ -1,0 +1,32 @@
+﻿<Page
+    x:Class="VALamp.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:VALamp"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="button" Content="Pause" HorizontalAlignment="Stretch" Grid.Row="1" Grid.Column="2" Click="button_Click" VerticalAlignment="Stretch" FontSize="40"/>
+            <TextBlock x:Name="textBlock" Grid.Column="1" TextWrapping="Wrap" Text="Spoken words" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="30"/>
+            <MediaElement Name="media"  Visibility="Collapsed"/>
+            <Button x:Name="button1" Content="Connect To Lamp" HorizontalAlignment="Stretch" Grid.Row="1" Grid.Column="0" Click="button1_Click" VerticalAlignment="Stretch" FontSize="40"/>
+            <Button x:Name="button3" Content="Start Recognizing" HorizontalAlignment="Stretch" Grid.Column="1" Grid.Row="1" Click="button3_Click" VerticalAlignment="Stretch" FontSize="40"/>
+            <Rectangle x:Name="Status" Fill="#FFFF0909" HorizontalAlignment="Left" Height="100" Grid.Column="0" Stroke="Black" VerticalAlignment="Top" Width="100"/>
+            <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Margin="105,73,0,0" TextWrapping="Wrap" Text="Green if listening." VerticalAlignment="Top" FontSize="25"/>
+        </Grid>
+
+
+    </Grid>
+</Page>
